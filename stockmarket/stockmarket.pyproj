@@ -31,12 +31,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app\forms.py" />
-    <Compile Include="app\models.py" />
-    <Compile Include="app\tests.py" />
-    <Compile Include="app\views.py" />
-    <Compile Include="app\__init__.py" />
-    <Compile Include="app\migrations\__init__.py" />
+    <Compile Include="stock\admin.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="stock\forms.py" />
+    <Compile Include="stock\models.py" />
+    <Compile Include="stock\serializers.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="stock\tests.py" />
+    <Compile Include="stock\views.py" />
+    <Compile Include="stock\__init__.py" />
+    <Compile Include="stock\migrations\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="stockmarket\__init__.py" />
     <Compile Include="stockmarket\settings.py" />
@@ -44,48 +50,57 @@
     <Compile Include="stockmarket\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\" />
-    <Folder Include="app\migrations\" />
-    <Folder Include="app\static\" />
-    <Folder Include="app\static\app\" />
-    <Folder Include="app\static\app\content\" />
-    <Folder Include="app\static\app\fonts\" />
-    <Folder Include="app\static\app\scripts\" />
-    <Folder Include="app\templates\" />
-    <Folder Include="app\templates\app\" />
+    <Folder Include="C:\Users\Marsha11\source\repos\stockmarket\stockmarket\stock\" />
+    <Folder Include="C:\Users\Marsha11\source\repos\stockmarket\stockmarket\stock\migrations\" />
+    <Folder Include="C:\Users\Marsha11\source\repos\stockmarket\stockmarket\stock\static\" />
+    <Folder Include="C:\Users\Marsha11\source\repos\stockmarket\stockmarket\stock\static\app\" />
+    <Folder Include="C:\Users\Marsha11\source\repos\stockmarket\stockmarket\stock\static\app\content\" />
+    <Folder Include="C:\Users\Marsha11\source\repos\stockmarket\stockmarket\stock\static\app\fonts\" />
+    <Folder Include="C:\Users\Marsha11\source\repos\stockmarket\stockmarket\stock\static\app\scripts\" />
+    <Folder Include="C:\Users\Marsha11\source\repos\stockmarket\stockmarket\stock\templates\" />
+    <Folder Include="C:\Users\Marsha11\source\repos\stockmarket\stockmarket\stock\templates\app\" />
     <Folder Include="stockmarket\" />
+    <Folder Include="stock\" />
+    <Folder Include="stock\migrations\" />
+    <Folder Include="stock\static\" />
+    <Folder Include="stock\static\app\" />
+    <Folder Include="stock\static\app\content\" />
+    <Folder Include="stock\static\app\fonts\" />
+    <Folder Include="stock\static\app\scripts\" />
+    <Folder Include="stock\templates\" />
+    <Folder Include="stock\templates\app\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
-    <Content Include="app\static\app\content\bootstrap.css" />
-    <Content Include="app\static\app\content\bootstrap.min.css" />
-    <Content Include="app\static\app\content\site.css" />
-    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="app\static\app\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="app\static\app\scripts\bootstrap.js" />
-    <Content Include="app\static\app\scripts\bootstrap.min.js" />
-    <Content Include="app\static\app\scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="app\static\app\scripts\jquery-1.10.2.js" />
-    <Content Include="app\static\app\scripts\jquery-1.10.2.min.js" />
-    <Content Include="app\static\app\scripts\jquery-1.10.2.min.map" />
-    <Content Include="app\static\app\scripts\jquery.validate-vsdoc.js" />
-    <Content Include="app\static\app\scripts\jquery.validate.js" />
-    <Content Include="app\static\app\scripts\jquery.validate.min.js" />
-    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="app\static\app\scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="app\static\app\scripts\modernizr-2.6.2.js" />
-    <Content Include="app\static\app\scripts\respond.js" />
-    <Content Include="app\static\app\scripts\respond.min.js" />
-    <Content Include="app\static\app\scripts\_references.js" />
-    <Content Include="app\templates\app\about.html" />
-    <Content Include="app\templates\app\contact.html" />
-    <Content Include="app\templates\app\index.html" />
-    <Content Include="app\templates\app\layout.html" />
-    <Content Include="app\templates\app\login.html" />
-    <Content Include="app\templates\app\loginpartial.html" />
+    <Content Include="stock\static\app\content\bootstrap.css" />
+    <Content Include="stock\static\app\content\bootstrap.min.css" />
+    <Content Include="stock\static\app\content\site.css" />
+    <Content Include="stock\static\app\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="stock\static\app\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="stock\static\app\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="stock\static\app\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="stock\static\app\scripts\bootstrap.js" />
+    <Content Include="stock\static\app\scripts\bootstrap.min.js" />
+    <Content Include="stock\static\app\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="stock\static\app\scripts\jquery-1.10.2.js" />
+    <Content Include="stock\static\app\scripts\jquery-1.10.2.min.js" />
+    <Content Include="stock\static\app\scripts\jquery-1.10.2.min.map" />
+    <Content Include="stock\static\app\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="stock\static\app\scripts\jquery.validate.js" />
+    <Content Include="stock\static\app\scripts\jquery.validate.min.js" />
+    <Content Include="stock\static\app\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="stock\static\app\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="stock\static\app\scripts\modernizr-2.6.2.js" />
+    <Content Include="stock\static\app\scripts\respond.js" />
+    <Content Include="stock\static\app\scripts\respond.min.js" />
+    <Content Include="stock\static\app\scripts\_references.js" />
+    <Content Include="stock\templates\app\about.html" />
+    <Content Include="stock\templates\app\contact.html" />
+    <Content Include="stock\templates\app\index.html" />
+    <Content Include="stock\templates\app\layout.html" />
+    <Content Include="stock\templates\app\login.html" />
+    <Content Include="stock\templates\app\loginpartial.html" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.html">
